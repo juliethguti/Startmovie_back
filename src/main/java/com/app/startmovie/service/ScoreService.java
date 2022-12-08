@@ -29,7 +29,7 @@ public class ScoreService {
 
     public ResponseDto create(Score request) {
         ResponseDto response = new ResponseDto();
-        if(request.getScore().intValue()<0 || request.getScore().intValue()>10){
+        if(request.getScore().intValue()<0 || request.getScore().intValue()>5){
             response.status=false;
             response.message="La calificación enviada no está dentro de los valores esperados";
         }else{
